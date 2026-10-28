@@ -78,6 +78,94 @@ details p { padding: 0 14px 4px; }
 footer { background: var(--azul); color: #d9ddeb; font-size: 13px; padding: 24px 0 90px; text-align: center; }
 footer a { color: #fff; }
 footer p { margin: 0 0 8px; }
+
+/* Reformulação visual: missão investigativa — copy original preservada */
+:root{--azul:#101c39;--verde:#14a66b;--verde-esc:#0b774c;--creme:#f7f5ed;--cinza:#616b7a;--borda:#e3e8ef;--ouro:#f9c64a}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#f6f8fb;color:#243149;line-height:1.62}
+.faixa{background:#f7c54a;color:#17203a;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px}
+.wrap{max-width:1060px;padding:0 24px}
+section{padding:75px 0;position:relative;overflow:hidden}
+section+section{border-top:0}
+section:nth-of-type(2n){background:#f0f5fb}
+section.creme{background:#f0f5fb}
+h1,h2,h3{color:#132348;letter-spacing:-.035em}
+h1{font-size:clamp(37px,5vw,65px);line-height:1.08;font-weight:900;margin:24px 0 22px}
+h2{font-size:clamp(29px,3.5vw,43px);line-height:1.14;font-weight:900;max-width:760px;margin:0 0 24px}
+h3{font-size:23px;font-weight:850}
+p{max-width:750px}
+.sub{font-size:clamp(19px,2vw,23px);line-height:1.55;color:#e1e8f5}
+section:first-of-type{background:radial-gradient(ellipse at 86% 24%,#2a426c 0,transparent 52%),linear-gradient(145deg,#0d1732,#182b53);color:#fff;padding:72px 0 80px}
+section:first-of-type:before{content:"✦  CASO EM ABERTO  /  MISSÃO MATEMÁTICA";display:block;max-width:1060px;padding:0 24px;margin:auto;color:#ffd76a;letter-spacing:.18em;font-size:12px;font-weight:900}
+section:first-of-type h1{color:#fff;max-width:850px}
+section:first-of-type .wrap{display:grid;grid-template-columns:1fr .86fr;column-gap:55px;align-items:center}
+section:first-of-type h1,section:first-of-type .sub{grid-column:1}
+section:first-of-type .figura{grid-column:2;grid-row:1/5;margin:0;transform:rotate(2deg)}
+section:first-of-type .figura img{border-radius:20px;box-shadow:0 28px 75px #070e24b8;border:8px solid #ffffff18}
+section:first-of-type .resumo{grid-column:1;text-align:left;font-size:15px;line-height:1.8;color:#ffd96c;font-weight:800;margin:14px 0}
+section:first-of-type .btn{grid-column:1}
+.btn{max-width:580px;background:linear-gradient(180deg,#20c785,#0b9d64);color:#fff;border-radius:13px;padding:20px 24px;box-shadow:0 6px 0 #086b46,0 12px 25px #0b9d6430;font-size:17px;text-transform:uppercase;letter-spacing:.025em;transition:transform .18s,filter .18s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.btn:active{transform:translateY(3px)}
+section:not(:first-of-type)>.wrap{position:relative}
+section:not(:first-of-type) h2:before{content:"✦ MISSÃO EM ANDAMENTO";display:block;font-size:11px;letter-spacing:.17em;font-weight:900;color:#b17b0e;margin-bottom:12px}
+.balao{display:inline-block;max-width:720px;background:#fff;border:2px solid #ffcc57;color:#17294f;font-size:clamp(21px,3vw,31px);padding:27px 33px;box-shadow:0 12px 36px #1526440e}
+.balao:after{border-top-color:#ffcc57}
+.passos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+.passos li{padding:21px;border:1px solid #dce4ee;box-shadow:0 10px 24px #20305008;border-radius:16px;align-items:center}
+.passos .n{background:#f9c64a;color:#14213f;width:46px;height:46px;font-size:20px}
+section:nth-of-type(4) .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+section:nth-of-type(4) h2{grid-column:1/-1}
+section:nth-of-type(4) .figura{margin:0;background:white;border:1px solid #dce4ee;padding:12px;border-radius:18px;box-shadow:0 14px 35px #101d3012}
+section:nth-of-type(4) .figura img{border-radius:10px}
+section:nth-of-type(4) .legenda{font-size:14px;margin:0 0 16px;padding:0 8px}
+.lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 22px;margin:26px 0}
+.lista li{background:#fff;border:1px solid #e0e7ef;padding:17px 18px 17px 47px;border-radius:13px;box-shadow:0 8px 20px #101d3008}
+.lista li:before{left:18px;top:18px}
+.formato{background:#fff9e5;border-left:5px solid #e7b339;padding:19px 25px;max-width:100%;border-radius:10px}
+.bonus{border:2px dashed #d4aa45;background:#fffdf5;padding:25px;border-radius:18px;display:grid;grid-template-columns:1fr 260px;gap:18px;align-items:center}
+.bonus img{width:100%;border-radius:12px}
+.colunas{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.col{padding:26px;border-radius:20px}
+.col.sim{background:#e9f8f0;border-color:#b6e9d0}
+.col.nao{background:#fff;border-color:#dde3ea}
+.prova{background:#fff;border-left:5px solid #f6c44f;border-radius:15px;padding:24px;margin-bottom:17px;box-shadow:0 10px 28px #121f3b0a;font-size:18px}
+.oferta{max-width:690px;margin:0 auto;background:#fff;border:2px solid #f4c34e;padding:34px;border-radius:24px;box-shadow:0 25px 65px #14213b1c}
+.oferta h2{margin:auto auto 16px;text-align:center}
+.oferta h2:before{content:"✦ ACESSO À MISSÃO"}
+.oferta .mini{max-width:270px}
+.preco{font-size:clamp(54px,7vw,78px);color:#13264d}
+.selo{background:#f4f8fd}
+.garantia{background:#f5f8fc}
+details{border:1px solid #e1e7ef;border-radius:14px;box-shadow:0 5px 15px #111f3808;margin-bottom:12px}
+summary{padding:18px 45px 18px 20px}
+details p{padding:0 20px 14px}
+.fecho{background:linear-gradient(145deg,#121f3e,#1c3762)!important;color:#fff}
+.fecho p{color:#fff;font-size:clamp(25px,3vw,38px);line-height:1.2;max-width:750px;margin:0 auto 26px}
+.fecho img{max-width:350px;margin:auto}
+.fecho .btn{margin:28px auto 0}
+footer{background:#0b1429;padding:38px 0 55px}
+@media(max-width:760px){
+ .wrap{padding:0 20px}
+ section{padding:48px 0}
+ section:first-of-type{padding:42px 0 55px}
+ section:first-of-type .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
+ section:first-of-type .figura{order:3;margin:14px 0}
+ section:first-of-type .resumo{order:4;text-align:center}
+ section:first-of-type .btn{order:5}
+ h1{font-size:clamp(31px,9vw,44px)}
+ h2{font-size:clamp(27px,7vw,35px)}
+ .sub{font-size:18px}
+ .passos,.lista,.colunas{grid-template-columns:1fr}
+ section:nth-of-type(4) .wrap{grid-template-columns:1fr;gap:12px}
+ section:nth-of-type(4) h2{grid-column:1}
+ section:nth-of-type(4) .figura{margin-top:14px}
+ .bonus{grid-template-columns:1fr}
+ .bonus img{max-width:350px;margin:auto}
+ .oferta{padding:22px 16px}
+ .btn{font-size:16px;padding:18px 14px}
+ .figura{margin-left:0;margin-right:0}
+}
 </style>
 </head>
 <body>

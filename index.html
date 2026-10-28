@@ -194,6 +194,13 @@ section.hero-editable{min-height:0;display:block;padding:0 0 42px!important}
 .hero-editable .hero-copy{width:100%}
 .hero-editable h1{font-size:clamp(34px,8.8vw,47px)}
 }
+
+/* Mobile: texto sobreposto ao retrato, sem faixa vazia */
+@media(max-width:760px){
+.hero-editable .hero-inner{padding-top:135px!important}
+.hero-editable .hero-copy{position:relative;z-index:2}
+.hero-editable:after{background:linear-gradient(180deg,#071a3810 0%,#071a385c 90px,#071a38cb 210px,#071a38 345px,#071a38 100%)!important}
+}
 </style>
 </head>
 <body>

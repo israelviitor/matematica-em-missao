@@ -203,23 +203,52 @@ section.hero-editable{min-height:0;display:block;padding:0 0 42px!important}
 }
 
 .missions-mockup{margin:20px auto 28px;max-width:850px}.missions-mockup img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 32px #1f2a5a23}.missions-mockup figcaption{font-size:13px;color:#5c6573;text-align:center;margin-top:8px}.missions-mockup[hidden]{display:none}
+
+/* Primeira dobra otimizada para apresentação do produto com fundo do aluno */
+.hero-conversion .hero-inner{max-width:1220px}
+.hero-conversion .hero-copy{width:min(54%,650px)}
+.hero-conversion .hero-product{display:block;width:100%;max-width:510px;margin:10px 0 14px}
+.hero-conversion .hero-product img{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 16px #03112766)}
+.hero-conversion .hero-points{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px;max-width:570px}
+.hero-conversion .hero-points li{font-size:15px;line-height:1.45;color:#f8fafc;padding-left:27px;position:relative}
+.hero-conversion .hero-points li:before{content:"✓";position:absolute;left:0;top:0;color:#f5c431;font-weight:900}
+.hero-conversion .hero-cta{width:fit-content!important;max-width:100%;min-height:52px!important;padding:13px 22px!important;font-size:14px!important;line-height:1.35;margin:8px 0 17px!important;border-radius:9px}
+.hero-conversion .hero-trust{font-size:12px}
+@media(min-width:761px){.hero-conversion{padding-top:52px!important;padding-bottom:52px!important}.hero-conversion .hero-copy{width:min(55%,650px)}.hero-conversion h1{font-size:clamp(35px,4.4vw,57px)}.hero-conversion .hero-product{max-width:480px}}
+@media(max-width:760px){
+.hero-conversion .hero-inner{padding-top:125px!important}
+.hero-conversion .hero-copy{width:100%}
+.hero-conversion h1{font-size:clamp(32px,8vw,44px);margin-bottom:13px}
+.hero-conversion p.sub{font-size:17px;line-height:1.4;margin-bottom:10px}
+.hero-conversion .hero-product{margin:5px auto 12px;max-width:430px}
+.hero-conversion .hero-points{gap:9px}
+.hero-conversion .hero-points li{font-size:15px}
+.hero-conversion .hero-cta{display:block;width:100%!important;max-width:340px!important;text-align:center;margin:13px auto 16px!important}
+}
 </style>
 </head>
 <body>
 
 <div class="faixa">Para professoras do 3º, 4º e 5º ano</div>
 
-<!-- 1. Primeira dobra: arte à direita, textos editáveis -->
-<section class="hero-editable">
+<!-- 1. Primeira dobra: produto em destaque, textos editáveis -->
+<section class="hero-editable hero-conversion">
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <span class="hero-tag">MATEMÁTICA EM MISSÃO</span>
       <h1>Seu aluno sabe fazer a conta, mas <span>trava quando o problema não diz qual é?</span></h1>
-      <p class="sub">Missões de mistério para imprimir: a turma só avança se ler o problema e escolher a conta.</p>
-      <div class="hero-benefits"><span>📚 30 missões</span><span>🎒 3º, 4º e 5º ano</span><span>🔐 3 níveis</span><span>🖨️ P&amp;B</span></div>
+      <p class="sub">Missões em que a turma só avança se ler o problema e escolher a conta.</p>
+      <picture class="hero-product">
+        <img src="img/mockup-primeira-dobra.webp" onerror="this.onerror=null;this.src='img/mockup-missoes-65.webp'" alt="Ilustração de três missões de matemática para 3º, 4º e 5º ano" width="1050" height="700" decoding="async">
+      </picture>
+      <ul class="hero-points">
+        <li><strong>30 missões prontas:</strong> 10 para cada série, em PDF para imprimir.</li>
+        <li><strong>3 níveis de dificuldade:</strong> a turma resolve o mesmo caso, cada aluno no seu ritmo.</li>
+        <li><strong>Aplicação rápida:</strong> gabarito comentado e roteiro de 2 minutos.</li>
+      </ul>
       <a class="btn checkout hero-cta" href="#oferta">QUERO AS MISSÕES DA MINHA TURMA <span aria-hidden="true">→</span></a>
-      <div class="hero-trust"><span>♢ Compra segura</span><span>↓ Acesso imediato</span><span>▤ Imprima e use</span></div>
+      <div class="hero-trust"><span>♢ Compra segura</span><span>↓ Acesso por e-mail</span><span>▤ Imprima e use</span></div>
     </div>
   </div>
 </section>

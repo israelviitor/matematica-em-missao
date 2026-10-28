@@ -79,93 +79,33 @@ footer { background: var(--azul); color: #d9ddeb; font-size: 13px; padding: 24px
 footer a { color: #fff; }
 footer p { margin: 0 0 8px; }
 
-/* Reformulação visual: missão investigativa — copy original preservada */
-:root{--azul:#101c39;--verde:#14a66b;--verde-esc:#0b774c;--creme:#f7f5ed;--cinza:#616b7a;--borda:#e3e8ef;--ouro:#f9c64a}
-html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#f6f8fb;color:#243149;line-height:1.62}
-.faixa{background:#f7c54a;color:#17203a;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px}
-.wrap{max-width:1060px;padding:0 24px}
-section{padding:75px 0;position:relative;overflow:hidden}
-section+section{border-top:0}
-section:nth-of-type(2n){background:#f0f5fb}
-section.creme{background:#f0f5fb}
-h1,h2,h3{color:#132348;letter-spacing:-.035em}
-h1{font-size:clamp(37px,5vw,65px);line-height:1.08;font-weight:900;margin:24px 0 22px}
-h2{font-size:clamp(29px,3.5vw,43px);line-height:1.14;font-weight:900;max-width:760px;margin:0 0 24px}
-h3{font-size:23px;font-weight:850}
-p{max-width:750px}
-.sub{font-size:clamp(19px,2vw,23px);line-height:1.55;color:#e1e8f5}
-section:first-of-type{background:radial-gradient(ellipse at 86% 24%,#2a426c 0,transparent 52%),linear-gradient(145deg,#0d1732,#182b53);color:#fff;padding:72px 0 80px}
-section:first-of-type:before{content:"✦  CASO EM ABERTO  /  MISSÃO MATEMÁTICA";display:block;max-width:1060px;padding:0 24px;margin:auto;color:#ffd76a;letter-spacing:.18em;font-size:12px;font-weight:900}
-section:first-of-type h1{color:#fff;max-width:850px}
-section:first-of-type .wrap{display:grid;grid-template-columns:1fr .86fr;column-gap:55px;align-items:center}
-section:first-of-type h1,section:first-of-type .sub{grid-column:1}
-section:first-of-type .figura{grid-column:2;grid-row:1/5;margin:0;transform:rotate(2deg)}
-section:first-of-type .figura img{border-radius:20px;box-shadow:0 28px 75px #070e24b8;border:8px solid #ffffff18}
-section:first-of-type .resumo{grid-column:1;text-align:left;font-size:15px;line-height:1.8;color:#ffd96c;font-weight:800;margin:14px 0}
-section:first-of-type .btn{grid-column:1}
-.btn{max-width:580px;background:linear-gradient(180deg,#20c785,#0b9d64);color:#fff;border-radius:13px;padding:20px 24px;box-shadow:0 6px 0 #086b46,0 12px 25px #0b9d6430;font-size:17px;text-transform:uppercase;letter-spacing:.025em;transition:transform .18s,filter .18s}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
-.btn:active{transform:translateY(3px)}
-section:not(:first-of-type)>.wrap{position:relative}
-section:not(:first-of-type) h2:before{content:"✦ MISSÃO EM ANDAMENTO";display:block;font-size:11px;letter-spacing:.17em;font-weight:900;color:#b17b0e;margin-bottom:12px}
-.balao{display:inline-block;max-width:720px;background:#fff;border:2px solid #ffcc57;color:#17294f;font-size:clamp(21px,3vw,31px);padding:27px 33px;box-shadow:0 12px 36px #1526440e}
-.balao:after{border-top-color:#ffcc57}
-.passos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
-.passos li{padding:21px;border:1px solid #dce4ee;box-shadow:0 10px 24px #20305008;border-radius:16px;align-items:center}
-.passos .n{background:#f9c64a;color:#14213f;width:46px;height:46px;font-size:20px}
-section:nth-of-type(4) .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
-section:nth-of-type(4) h2{grid-column:1/-1}
-section:nth-of-type(4) .figura{margin:0;background:white;border:1px solid #dce4ee;padding:12px;border-radius:18px;box-shadow:0 14px 35px #101d3012}
-section:nth-of-type(4) .figura img{border-radius:10px}
-section:nth-of-type(4) .legenda{font-size:14px;margin:0 0 16px;padding:0 8px}
-.lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 22px;margin:26px 0}
-.lista li{background:#fff;border:1px solid #e0e7ef;padding:17px 18px 17px 47px;border-radius:13px;box-shadow:0 8px 20px #101d3008}
-.lista li:before{left:18px;top:18px}
-.formato{background:#fff9e5;border-left:5px solid #e7b339;padding:19px 25px;max-width:100%;border-radius:10px}
-.bonus{border:2px dashed #d4aa45;background:#fffdf5;padding:25px;border-radius:18px;display:grid;grid-template-columns:1fr 260px;gap:18px;align-items:center}
-.bonus img{width:100%;border-radius:12px}
-.colunas{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.col{padding:26px;border-radius:20px}
-.col.sim{background:#e9f8f0;border-color:#b6e9d0}
-.col.nao{background:#fff;border-color:#dde3ea}
-.prova{background:#fff;border-left:5px solid #f6c44f;border-radius:15px;padding:24px;margin-bottom:17px;box-shadow:0 10px 28px #121f3b0a;font-size:18px}
-.oferta{max-width:690px;margin:0 auto;background:#fff;border:2px solid #f4c34e;padding:34px;border-radius:24px;box-shadow:0 25px 65px #14213b1c}
-.oferta h2{margin:auto auto 16px;text-align:center}
-.oferta h2:before{content:"✦ ACESSO À MISSÃO"}
-.oferta .mini{max-width:270px}
-.preco{font-size:clamp(54px,7vw,78px);color:#13264d}
-.selo{background:#f4f8fd}
-.garantia{background:#f5f8fc}
-details{border:1px solid #e1e7ef;border-radius:14px;box-shadow:0 5px 15px #111f3808;margin-bottom:12px}
-summary{padding:18px 45px 18px 20px}
-details p{padding:0 20px 14px}
-.fecho{background:linear-gradient(145deg,#121f3e,#1c3762)!important;color:#fff}
-.fecho p{color:#fff;font-size:clamp(25px,3vw,38px);line-height:1.2;max-width:750px;margin:0 auto 26px}
-.fecho img{max-width:350px;margin:auto}
-.fecho .btn{margin:28px auto 0}
-footer{background:#0b1429;padding:38px 0 55px}
-@media(max-width:760px){
- .wrap{padding:0 20px}
- section{padding:48px 0}
- section:first-of-type{padding:42px 0 55px}
- section:first-of-type .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}
- section:first-of-type .figura{order:3;margin:14px 0}
- section:first-of-type .resumo{order:4;text-align:center}
- section:first-of-type .btn{order:5}
- h1{font-size:clamp(31px,9vw,44px)}
- h2{font-size:clamp(27px,7vw,35px)}
- .sub{font-size:18px}
- .passos,.lista,.colunas{grid-template-columns:1fr}
- section:nth-of-type(4) .wrap{grid-template-columns:1fr;gap:12px}
- section:nth-of-type(4) h2{grid-column:1}
- section:nth-of-type(4) .figura{margin-top:14px}
- .bonus{grid-template-columns:1fr}
- .bonus img{max-width:350px;margin:auto}
- .oferta{padding:22px 16px}
- .btn{font-size:16px;padding:18px 14px}
- .figura{margin-left:0;margin-right:0}
-}
+
+/* Layout Missão; imagens originais temporárias até entrega das novas */
+:root{--azul:#1F2A5A;--verde:#12873F;--verde-esc:#0d6b31;--creme:#FBF6EA;--cinza:#646b79;--borda:#e5dece;--amarelo:#F5C431}
+html{scroll-behavior:smooth}body{background:var(--creme);color:#24304d;font-size:16px;overflow-x:hidden;line-height:1.6}.wrap{max-width:960px;padding:0 20px}
+.faixa{background:var(--amarelo);color:var(--azul);text-transform:none;letter-spacing:0;font-size:13px}
+section,section.creme{padding:48px 0;border:0;background:var(--creme)}section+section{border:0}section:nth-of-type(even){background:#fff}
+h1,h2,h3{color:var(--azul);letter-spacing:-.025em}h1{font-weight:900;line-height:1.12;font-size:clamp(34px,5.5vw,56px);margin:14px 0 18px}h2{font-size:clamp(27px,4vw,39px);font-weight:850;line-height:1.2;margin:10px 0 20px}
+p{font-size:16px}.sub{font-size:18px}.eyebrow{display:inline-block;background:var(--amarelo);color:var(--azul);font-size:11px;letter-spacing:.12em;font-weight:900;padding:5px 12px;border-radius:3px}
+.stamp{display:inline-block;border:2px solid var(--azul);border-radius:3px;padding:7px 13px;font-size:12px;font-weight:900;letter-spacing:.08em;color:var(--azul);transform:rotate(-5deg);margin-bottom:9px}
+.btn{background:var(--verde);box-shadow:0 4px 0 var(--verde-esc);min-height:56px;width:100%;border-radius:11px;font-size:17px;max-width:560px;margin:18px auto 6px}
+.figura{margin:16px 0}.figura img{width:100%;height:auto;box-shadow:0 8px 24px #1f2a5a1a;border-radius:14px}
+section:first-of-type{background:var(--creme)}.chips{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:20px 0}.chips span{background:#fff;border:1px solid #e6dfd1;border-radius:10px;padding:13px 10px;font-size:14px;line-height:1.3;font-weight:750;color:var(--azul)}
+mark{background:linear-gradient(transparent 45%,#f5c4318a 45%);color:inherit}
+.balao{background:var(--creme);border:2px solid var(--azul);transform:rotate(-1deg);box-shadow:5px 5px 0 #f5c43190;font-size:clamp(21px,4vw,30px)}.balao:after{border-top-color:var(--azul)}
+.trail{display:flex;flex-direction:column;position:relative;gap:1px}.trail:before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:3px dotted var(--amarelo)}.trail li{position:relative;border:0;background:transparent;padding:12px 0;gap:16px}.trail .n{z-index:1;width:56px;height:56px;display:flex;flex-direction:column;background:var(--amarelo);color:var(--azul);font-size:23px;border:3px solid #fff}.trail small{font-size:10px;line-height:1}
+.legenda{font-size:15px;margin:11px 0 25px}
+.missions{background:#fff!important}.missiongrid{display:grid;gap:19px;margin-top:27px}.missiongrid article{position:relative;border:1px solid #ded5be;background:var(--creme);border-radius:12px;padding:28px 20px 14px;box-shadow:0 8px 17px #1f2a5a0d}.missiongrid article:after{content:"";position:absolute;right:20px;top:-12px;width:15px;height:33px;border:3px solid #8794a3;border-radius:15px;transform:rotate(17deg)}.missiongrid h3{margin:10px 0}.missiongrid article p:last-child{border-top:1px dashed #d6cbb6;padding-top:12px}.tape{position:absolute;top:-12px;left:17px;background:var(--amarelo);font-weight:900;font-size:12px;padding:4px 16px;transform:rotate(-3deg)}
+.strip{background:var(--amarelo);color:var(--azul);font-weight:850;text-align:center;padding:14px 12px;border-radius:8px;margin-top:19px}
+section.navy{background:var(--azul)!important;color:#fff}.navy h2{color:#fff}.skills{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:21px 0}.skills>div{border:1px solid #ffffff4c;background:#ffffff0c;padding:17px 9px;text-align:center;border-radius:11px;font-size:27px}.skills strong{display:block;font-size:15px;line-height:1.3;color:#fff;margin-top:8px}
+.compact{background:#fff;border:1px solid var(--borda);padding:4px 16px;border-radius:13px}.compact li{padding:13px 0 13px 27px}.compact li:before{content:"▸";color:var(--azul);left:2px;top:12px}
+.emailnote{font-size:15px;background:#fff9e9;border-left-color:var(--amarelo)}.emailnote:before{content:"✉️ "}
+.bonus{position:relative;border:2px solid var(--amarelo);background:#fff;border-radius:13px;padding:30px 17px 17px;margin-top:26px}.ribbon{position:absolute;top:-13px;left:18px;background:var(--amarelo);color:var(--azul);padding:4px 21px;font-weight:900;font-size:13px;transform:rotate(-3deg)}.bonus img{max-width:600px;width:100%;margin:10px auto;border-radius:10px}
+.colunas{grid-template-columns:1fr 1fr;gap:10px}.col{padding:14px 10px;border-radius:9px}.col h3{font-size:17px}.col li{font-size:14px;padding:6px 0 6px 19px}.col.sim{background:#fff;border-color:var(--borda)}.col.sim li:before{color:#758094}.col.nao{background:#f2efe9;border-color:var(--borda)}
+.proof-band{border-left:4px solid var(--amarelo);background:#fff;padding:10px 18px;border-radius:8px}.prova{border:0;background:transparent;box-shadow:none;padding:10px 0;margin:0;font-size:15px}.prova+.prova{border-top:1px solid var(--borda)}
+.oferta{border:4px solid var(--azul);background:#fffdf8;border-radius:15px;position:relative;max-width:650px;padding:30px 18px}.offerstamp{position:absolute;top:-21px;right:12px;background:var(--creme);font-size:10px}.oferta .mini{width:80%;max-width:390px}.oferta .itens{display:table;margin:12px auto;text-align:left}.oferta .itens span{display:block;padding:4px 0}.oferta .itens span:before{content:"✓ ";color:var(--azul)}.preco{color:var(--azul);font-size:clamp(52px,9vw,76px)}.compara{display:inline-block;background:linear-gradient(transparent 40%,#f5c431a8 40%)}.selos{flex-wrap:nowrap;gap:5px}.selo{background:var(--creme);font-size:10px;flex:1;padding:7px 4px;border-radius:6px}.garantia{background:var(--creme)}
+details{border-radius:10px}summary{font-size:16px}.fecho{background:var(--azul)!important}.fecho p{color:#fff;font-size:clamp(23px,4vw,34px)}.fecho img{max-width:300px}.fecho .btn{margin:20px auto}footer{background:#131b37}
+@media(min-width:760px){section{padding:65px 0}section:first-of-type .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0 35px;align-items:center}section:first-of-type .stamp,section:first-of-type h1,section:first-of-type .sub,section:first-of-type .chips,section:first-of-type .btn{grid-column:1}section:first-of-type .figura{grid-column:2;grid-row:1/6}.missiongrid{grid-template-columns:repeat(3,minmax(0,1fr))}.skills{grid-template-columns:repeat(3,minmax(0,1fr))}.colunas{gap:20px}.col{padding:23px}.col li{font-size:16px}}
 </style>
 </head>
 <body>
@@ -174,11 +114,11 @@ footer{background:#0b1429;padding:38px 0 55px}
 
 <!-- 1. Primeira dobra -->
 <section style="padding-top:4px">
-  <div class="wrap">
+  <div class="wrap"><span class="stamp">MISSÃO Nº 01</span>
     <h1>Seu aluno sabe fazer a conta, mas trava quando o problema não diz qual é?</h1>
     <p class="sub">Missões de mistério para imprimir: a turma só avança se ler o problema e escolher a conta.</p>
     <div class="figura"><img src="img/kit.webp" width="900" height="700" alt="As missões do 3º, 4º e 5º ano impressas em preto e branco" fetchpriority="high"></div>
-    <p class="resumo">30 missões · 3º, 4º e 5º ano · 3 níveis · P&amp;B · R$&nbsp;17,90</p>
+    <div class="chips"><span>📚 30 missões prontas</span><span>🎒 3º, 4º e 5º ano</span><span>🔐 3 níveis na mesma missão</span><span>🖨️ P&amp;B, pouca tinta</span></div>
     <a class="btn checkout" href="#oferta">Quero as missões da minha turma</a>
   </div>
 </section>
@@ -186,10 +126,10 @@ footer{background:#0b1429;padding:38px 0 55px}
 <!-- 2. Identificação com a dor -->
 <section class="creme">
   <div class="wrap">
-    <h2>Você já ouviu isso hoje?</h2>
+    <span class="eyebrow">O PROBLEMA</span><h2>Você já ouviu isso hoje?</h2>
     <div class="balao">"Professora, é de mais ou de vezes?"</div>
-    <p>A turma faz a conta quando você diz qual é. Mas é só o problema vir em texto que vem essa pergunta.</p>
-    <p>Você passa lista, repete a tabuada, faz revisão. E na avaliação o problema vem escrito, e eles travam do mesmo jeito.</p>
+    <p>A turma faz a conta quando você diz qual é. Mas é só <mark>o problema vir em texto</mark> que vem essa pergunta.</p>
+    <p>Você passa lista, repete a tabuada, faz revisão. E na avaliação o problema vem escrito, e eles <mark>travam do mesmo jeito</mark>.</p>
     <p>E ainda tem que achar atividade diferente toda semana, que caiba na cota de xerox ou na tinta que muitas vezes sai do bolso da professora.</p>
   </div>
 </section>
@@ -197,15 +137,15 @@ footer{background:#0b1429;padding:38px 0 55px}
 <!-- 3. Virada (mecanismo) -->
 <section>
   <div class="wrap">
-    <h2>Não é você. É a lista de continhas.</h2>
+    <span class="eyebrow">A VIRADA</span><h2>Não é você. É a lista de continhas.</h2>
     <p>Quase todo material entrega a conta pronta ("resolva 34 + 18"). O aluno aprende a calcular, mas nunca precisa decidir <strong>qual</strong> conta resolver.</p>
     <p class="fonte">Pesquisas da UFPA e da UFRGS apontam: a dificuldade está em interpretar o problema e escolher a operação.</p>
     <h3>Por isso criamos o <strong>Problema com Enredo</strong></h3>
-    <ol class="passos">
-      <li><span class="n">1</span><span><strong>Ler:</strong> a turma acha os dados na cena da história.</span></li>
-      <li><span class="n">2</span><span><strong>Decidir:</strong> escolhe qual conta resolve.</span></li>
-      <li><span class="n">3</span><span><strong>Resolver:</strong> faz a conta.</span></li>
-      <li><span class="n">4</span><span><strong>Conferir:</strong> vê se a resposta faz sentido no caso.</span></li>
+    <ol class="passos trail">
+      <li><span class="n">🔒<small>1</small></span><span><strong>Ler:</strong> a turma acha os dados na cena da história.</span></li>
+      <li><span class="n">🔒<small>2</small></span><span><strong>Decidir:</strong> escolhe qual conta resolve.</span></li>
+      <li><span class="n">🔒<small>3</small></span><span><strong>Resolver:</strong> faz a conta.</span></li>
+      <li><span class="n">🔓<small>4</small></span><span><strong>Conferir:</strong> vê se a resposta faz sentido no caso.</span></li>
     </ol>
     <p>Só a resposta certa abre a próxima etapa.</p>
     <a class="btn checkout" href="#oferta">Quero as missões da minha turma</a>
@@ -215,21 +155,21 @@ footer{background:#0b1429;padding:38px 0 55px}
 <!-- 4. Demonstração -->
 <section class="creme">
   <div class="wrap">
-    <h2>Veja uma missão por dentro</h2>
-    <div class="figura"><img src="img/etapa.webp" width="900" height="1180" alt="Etapa 1 da missão do 4º ano" loading="lazy"></div>
+    <span class="eyebrow">POR DENTRO</span><h2>Veja uma missão por dentro</h2>
+    <div class="figura"><img src="img/etapa.webp" data-next-image="etapa-zoom.webp" width="900" height="1180" alt="Etapa 1 da missão do 4º ano" loading="lazy"></div>
     <p class="legenda">Repare: a folha não diz se é de mais ou de menos. Quem decide é a turma.</p>
     <div class="figura"><img src="img/niveis.webp" width="900" height="1267" alt="A mesma etapa nos níveis 1, 2 e 3" loading="lazy"></div>
     <p class="legenda">O mesmo mistério em 3 níveis. A turma toda resolve o mesmo caso, cada um no seu ritmo.</p>
     <div class="figura"><img src="img/professora.webp" width="900" height="760" alt="Roteiro de 2 minutos e gabarito comentado" loading="lazy"></div>
     <p class="legenda">Gabarito comentado e roteiro de 2 minutos: você lê antes de entrar na sala e aplica.</p>
   </div>
-</section>
+</section><section class="missions"><div class="wrap"><span class="eyebrow">AS MISSÕES</span><h2>Missões que sua turma vai resolver</h2><div class="missiongrid"><article><span class="tape">3º ANO</span><h3>Missão da Horta</h3><p>As cenouras da horta amanheceram mordidas. Quem foi, e como entrou com o portão fechado?</p><p><strong>Pratica:</strong> subtração, multiplicação, dinheiro e troco, divisão.</p></article><article><span class="tape">4º ANO</span><h3>Missão dos R$ 50</h3><p>No fim da Feira do Livro, o caixa tem R$ 50 a menos. A turma testa 4 explicações sem acusar ninguém.</p><p><strong>Pratica:</strong> subtração, troco e desconto, horas e minutos, divisão.</p></article><article><span class="tape">5º ANO</span><h3>Missão da Cápsula do Tempo</h3><p>Há 25 anos, uma turma enterrou uma cápsula na escola. Com um gráfico, frações e um recibo antigo, vocês descobrem onde.</p><p><strong>Pratica:</strong> gráfico de colunas, frações, números decimais, multiplicação e divisão.</p></article></div><div class="strip">+ 27 missões no kit, 10 para cada série.</div></div></section><section class="navy"><div class="wrap"><span class="eyebrow">O QUE A TURMA PRATICA</span><h2>O que a turma pratica</h2><div class="skills"><div>🔍<strong>Interpretar o problema</strong></div><div>🤔<strong>Escolher a operação</strong></div><div>🍕<strong>Frações</strong></div><div>💰<strong>Dinheiro e troco</strong></div><div>⏰<strong>Medidas e tempo</strong></div><div>📊<strong>Tabelas e gráficos</strong></div></div><div class="strip">Não é só continha: é problema em texto, como nas avaliações.</div></div></section>
 
 <!-- 5. O que você recebe -->
 <section>
   <div class="wrap">
-    <h2>O que você recebe</h2>
-    <ul class="lista">
+    <span class="eyebrow">O QUE VEM NO KIT</span><h2>O que você recebe</h2>
+    <ul class="lista compact">
       <li><strong>30 missões de mistério</strong>, 10 para cada série (3º, 4º e 5º ano)</li>
       <li><strong>3 níveis de dificuldade</strong> em cada missão, para turma heterogênea</li>
       <li>Problemas além das 4 operações: frações, dinheiro e troco, medidas e tempo, tabelas e gráficos</li>
@@ -238,10 +178,10 @@ footer{background:#0b1429;padding:38px 0 55px}
       <li><strong>Preto e branco, pouca tinta.</strong> Imprime na impressora de casa ou na xerox da escola</li>
       <li>Missões de 40 a 50 minutos, em grupos de 3 a 5 alunos ou individual</li>
     </ul>
-    <p class="formato">Tudo em PDF. Você recebe o acesso no e-mail assim que o pagamento é aprovado e pode imprimir para as suas turmas sempre que precisar.</p>
-    <div class="bonus">
+    <p class="formato emailnote">Tudo em PDF. Você recebe o acesso no e-mail assim que o pagamento é aprovado e pode imprimir para as suas turmas sempre que precisar.</p>
+    <div class="bonus"><span class="ribbon">BÔNUS</span>
       <p><strong>Bônus: Kit de Ambientação.</strong> Crachá de agente, ficha de registro do grupo e certificado de missão cumprida para imprimir.</p>
-      <img src="img/bonus.webp" width="900" height="700" alt="Crachás de agente, ficha do grupo e certificado" loading="lazy">
+      <img src="img/bonus.webp" data-next-image="bonus-destaque.webp" width="900" height="700" alt="Crachás de agente, ficha do grupo e certificado" loading="lazy">
     </div>
     <a class="btn checkout" href="#oferta">Quero as 30 missões por R$&nbsp;17,90</a>
   </div>
@@ -249,7 +189,7 @@ footer{background:#0b1429;padding:38px 0 55px}
 
 <!-- 6. Para quem é / não é -->
 <section class="creme">
-  <div class="wrap colunas">
+  <div class="wrap"><span class="eyebrow">PARA QUEM É</span><div class="colunas">
     <div class="col sim">
       <h3>É para você se</h3>
       <ul>
@@ -267,29 +207,26 @@ footer{background:#0b1429;padding:38px 0 55px}
         <li>Quer lista de continha para fixação.</li>
       </ul>
     </div>
-  </div>
-</section>
+  </div></div></section>
 
 <!-- 7. Prova -->
 <section>
   <div class="wrap">
     <h2>Por que ensinar com problema e história</h2>
-    <div class="prova">A BNCC coloca a investigação e a resolução de problemas como "formas privilegiadas da atividade matemática".<span class="fonte">Fonte: BNCC, p. 266</span></div>
-    <div class="prova">Uma pesquisa da USP numa escola municipal de São Paulo viu que a história deixa a turma dos anos iniciais mais envolvida com a matemática.<span class="fonte">Fonte: tese USP, 2023</span></div>
-  </div>
-</section>
+    <div class="proof-band"><div class="prova">A BNCC coloca a investigação e a resolução de problemas como "formas privilegiadas da atividade matemática".<span class="fonte">Fonte: BNCC, p. 266</span></div>
+    <div class="prova">Uma pesquisa da USP numa escola municipal de São Paulo viu que a história deixa a turma dos anos iniciais mais envolvida com a matemática.<span class="fonte">Fonte: tese USP, 2023</span></div></div></div></section>
 
 <!-- 8. Oferta, preço e garantia -->
 <section class="creme" id="oferta">
   <div class="wrap">
-    <div class="oferta">
-      <h2>Tudo isso por</h2>
+    <div class="oferta"><span class="stamp offerstamp">MISSÃO Nº 01</span>
+      <span class="eyebrow">OFERTA</span><h2>Tudo isso por</h2>
       <img class="mini" src="img/kit.webp" width="900" height="700" alt="" loading="lazy">
-      <div class="itens">30 missões · 3 séries · 3 níveis · gabarito comentado · roteiro de 2 min · Kit de Ambientação</div>
+      <div class="itens"><span>30 missões</span><span>3 séries</span><span>3 níveis</span><span>gabarito comentado</span><span>roteiro de 2 min</span><span>Kit de Ambientação</span></div>
       <div class="preco">R$&nbsp;17,90<small>pagamento único</small></div>
       <p class="compara">Menos de R$&nbsp;0,60 por missão pronta.</p>
       <a class="btn checkout" href="#oferta">Quero as missões da minha turma</a>
-      <div class="selos"><span class="selo">🔒 Pagamento seguro</span><span class="selo">✔ Garantia de 7 dias</span></div>
+      <div class="selos"><span class="selo">🔒 Pagamento seguro</span><span class="selo">🛡️ Garantia de 7 dias</span><span class="selo">✉️ Acesso imediato no e-mail</span></div>
       <div class="garantia">
         <div class="icone"><span>7</span><small>DIAS</small></div>
         <p style="margin:0"><strong>Garantia de 7 dias.</strong> Você tem 7 dias, contados da compra, para pedir o reembolso por qualquer motivo. É só escrever para <span class="email">[E-MAIL]</span> e devolvemos 100% do valor.</p>
@@ -301,15 +238,14 @@ footer{background:#0b1429;padding:38px 0 55px}
 <!-- 9. FAQ -->
 <section>
   <div class="wrap">
-    <h2>Perguntas frequentes</h2>
+    <span class="eyebrow">DÚVIDAS</span><h2>Perguntas frequentes</h2>
     <details><summary>Serve para a minha série?</summary><p>Serve para 3º, 4º e 5º ano. Cada série tem as suas 10 missões, e cada missão tem 3 níveis.</p></details>
     <details><summary>Como eu recebo?</summary><p>Assim que o pagamento é aprovado, você recebe o acesso no e-mail. É PDF: baixa e imprime.</p></details>
     <details><summary>Precisa imprimir colorido?</summary><p>Não. Tudo é em preto e branco, pensado para gastar pouca tinta e caber na xerox da escola.</p></details>
     <details><summary>Tem muita coisa de graça na internet. Por que pagar?</summary><p>Porque aqui está pronto, separado por série e por habilidade, em 3 níveis, com gabarito comentado. Você não perde a noite garimpando folha solta.</p></details>
     <details><summary>Quanto tempo leva para aplicar?</summary><p>Cada missão dura de 40 a 50 minutos. O roteiro de 2 minutos explica como conduzir.</p></details>
     <details><summary>E se eu não gostar?</summary><p>Em até 7 dias da compra, por qualquer motivo, você pede o reembolso por e-mail e recebe 100% de volta.</p></details>
-  </div>
-</section>
+  <details><summary>Posso imprimir mais de uma vez?</summary><p>Sim. Você pode imprimir quantas vezes quiser para as suas turmas.</p></details><details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito.</p></details></div></section>
 
 <!-- 10. CTA final -->
 <section class="creme fecho">

@@ -135,21 +135,32 @@ section:first-of-type .figura img{transform:rotate(.5deg)}
 section:first-of-type .chips span{font-size:13px;padding:12px 9px}
 section:first-of-type .btn{width:100%;max-width:none;text-align:center;min-height:56px}
 }
+
+/* Primeira dobra com a arte exata aprovada, sem texto duplicado */
+section.hero-exact{background:#051735!important;padding:0!important;margin:0;overflow:hidden}
+.hero-exact .hero-image-wrap{position:relative;max-width:1536px;margin:0 auto}
+.hero-exact .hero-full-image{display:block;width:100%;height:auto;border:0;border-radius:0;box-shadow:none;transform:none}
+.hero-exact .hero-click{position:absolute;left:6%;top:75.8%;width:43%;height:10.7%;z-index:2;border-radius:14px}
+.hero-exact .hero-click:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.hero-exact .hero-mobile-cta{display:none}
+@media(max-width:700px){
+section.hero-exact{padding:0 0 18px!important}
+.hero-exact .hero-click{display:none}
+.hero-exact .hero-mobile-cta{display:block;margin:0 16px;background:#12873F;color:#fff;padding:16px 12px;min-height:54px;text-align:center;border-radius:11px;font-weight:900;text-decoration:none;font-size:16px;text-transform:uppercase;box-shadow:0 4px 0 #0d6b31}
+}
 </style>
 </head>
 <body>
 
 <div class="faixa">Para professoras do 3º, 4º e 5º ano</div>
 
-<!-- 1. Primeira dobra -->
-<section style="padding-top:4px">
-  <div class="wrap"><span class="stamp">MISSÃO Nº 01</span>
-    <h1>Seu aluno sabe fazer a conta, mas <span class="hero-highlight">trava quando o problema não diz qual é?</span></h1>
-    <p class="sub">Missões de mistério para imprimir: a turma só avança se ler o problema e escolher a conta.</p>
-    <div class="figura"><img src="img/kit.webp" width="900" height="700" alt="As missões do 3º, 4º e 5º ano impressas em preto e branco" fetchpriority="high"></div>
-    <div class="chips"><span>📚 30 missões prontas</span><span>🎒 3º, 4º e 5º ano</span><span>🔐 3 níveis na mesma missão</span><span>🖨️ P&amp;B, pouca tinta</span></div>
-    <a class="btn checkout" href="#oferta">Quero as missões da minha turma</a>
+<!-- 1. Primeira dobra: arte aprovada -->
+<section class="hero-exact">
+  <div class="hero-image-wrap">
+    <img class="hero-full-image" src="img/hero-missao-80.webp" width="1536" height="1024" alt="Matemática em Missão: seu aluno sabe fazer a conta, mas trava quando o problema não diz qual é? Missões de mistério para imprimir para 3º, 4º e 5º ano." fetchpriority="high">
+    <a class="hero-click checkout" href="#oferta" aria-label="Quero as missões da minha turma"></a>
   </div>
+  <a class="hero-mobile-cta checkout" href="#oferta">Quero as missões da minha turma</a>
 </section>
 
 <!-- 2. Identificação com a dor -->

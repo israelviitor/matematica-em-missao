@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && mkdir -p dist/img && cp -R img/. dist/img/ && cp termos.html privacidade.html dist/",
     "preview": "vite preview --host 0.0.0.0"
   },
   "devDependencies": {

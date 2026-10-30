@@ -250,6 +250,18 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 .hero-conversion h1{font-size:clamp(35px,4.15vw,43px)!important}
 .hero-conversion .hero-points li{font-size:14px}
 }
+
+/* Vitrines de missões — carrossel leve, sem biblioteca externa */
+.vitrine-intro{text-align:center;margin:25px auto 15px}.vitrine-intro h3{margin:0 0 5px}.vitrine-intro p{margin:0;color:#5b6474}
+.vitrine-frame{position:relative;max-width:1040px;margin:0 auto}
+.vitrine-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:thin;padding:10px 4px 20px}
+.vitrine-card{margin:0;flex:0 0 calc((100% - 36px)/3);min-width:0;scroll-snap-align:start;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #15234420}
+.vitrine-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.vitrine-card figcaption{font-size:14px;font-weight:700;color:#1f2a5a;padding:12px;text-align:center}
+.vitrine-arrow{position:absolute;top:45%;z-index:2;border:0;background:#1f2a5a;color:white;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:30px;line-height:1;box-shadow:0 4px 12px #0004}
+.vitrine-prev{left:-18px}.vitrine-next{right:-18px}.vitrine-arrow:hover{background:#303e7a}
+.vitrine-hint{text-align:center;color:#627083;font-size:13px;margin:8px 0 30px}
+@media(max-width:760px){.vitrine-track{gap:12px;padding:8px 8px 18px}.vitrine-card{flex:0 0 82%;}.vitrine-arrow{display:none}.vitrine-card figcaption{font-size:13px}.vitrine-intro h3{font-size:22px}.vitrine-hint{font-size:12px}}
 </style>
 </head>
 <body>
@@ -311,7 +323,18 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 <section class="creme">
   <div class="wrap">
     <span class="eyebrow">POR DENTRO</span><h2>Veja uma missão por dentro</h2>
-    <figure class="missions-mockup"><img src="img/mockup-missoes-65.webp" width="960" height="640" loading="lazy" decoding="async" alt="Ilustração conceitual das missões de matemática do 3º ao 5º ano, com folhas em preto e branco" onerror="this.closest('figure').hidden=true"><figcaption>Ilustração do conceito do kit. Veja abaixo as amostras reais das atividades.</figcaption></figure>
+    <div class="vitrine-intro"><h3>Conheça algumas das missões</h3><p>Explore as atividades de matemática do 3º, 4º e 5º ano.</p></div>
+<div class="vitrine-frame">
+  <button type="button" class="vitrine-arrow vitrine-prev" aria-label="Ver missão anterior" onclick="this.parentElement.querySelector('.vitrine-track').scrollBy({left:-this.parentElement.querySelector('.vitrine-track').clientWidth*.85,behavior:'smooth'})">‹</button>
+  <div class="vitrine-track" role="region" aria-label="Vitrines de missões" tabindex="0">
+    <figure class="vitrine-card"><img src="img/vitrine-horta.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Horta, atividade do 3º ano"><figcaption>3º ano · O Mistério da Horta</figcaption></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-r50.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Caso dos R$ 50, atividade do 4º ano"><figcaption>4º ano · O Caso dos R$ 50</figcaption></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-capsula.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Cápsula do Tempo, atividade do 5º ano"><figcaption>5º ano · O Mistério da Cápsula do Tempo</figcaption></figure>
+  </div>
+  <button type="button" class="vitrine-arrow vitrine-next" aria-label="Ver próxima missão" onclick="this.parentElement.querySelector('.vitrine-track').scrollBy({left:this.parentElement.querySelector('.vitrine-track').clientWidth*.85,behavior:'smooth'})">›</button>
+</div>
+<p class="vitrine-hint">Deslize para conhecer as missões. Imagens ilustrativas: folhas entregues em preto e branco.</p>
+<figure class="missions-mockup"><img src="img/mockup-missoes-65.webp" width="960" height="640" loading="lazy" decoding="async" alt="Ilustração conceitual das missões de matemática do 3º ao 5º ano, com folhas em preto e branco" onerror="this.closest('figure').hidden=true"><figcaption>Ilustração do conceito do kit. Veja abaixo as amostras reais das atividades.</figcaption></figure>
     <div class="figura"><img src="img/etapa.webp" data-next-image="etapa-zoom.webp" width="900" height="1180" alt="Etapa 1 da missão do 4º ano" loading="lazy"></div>
     <p class="legenda">Repare: a folha não diz se é de mais ou de menos. Quem decide é a turma.</p>
     <div class="figura"><img src="img/niveis.webp" width="900" height="1267" alt="A mesma etapa nos níveis 1, 2 e 3" loading="lazy"></div>

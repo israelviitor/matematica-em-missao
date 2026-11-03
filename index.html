@@ -290,6 +290,27 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 .oferta .itens{columns:2;column-gap:16px;max-width:435px;width:100%}.oferta .itens span{break-inside:avoid;font-size:14px;line-height:1.35;padding:6px 0}
 @media(max-width:760px){.metodo-visual{grid-template-columns:1fr 1fr;gap:10px}.metodo-passo{min-height:0;padding:13px 11px}.metodo-passo strong{font-size:16px}.metodo-passo p{font-size:13px}.metodo-a{grid-column:1;grid-row:1}.metodo-b{grid-column:2;grid-row:1}.metodo-c{grid-column:1;grid-row:3}.metodo-d{grid-column:2;grid-row:3}.metodo-folha{grid-column:1/3;grid-row:2;max-width:275px;width:80%;margin:16px auto;transform:rotate(-1deg)}.metodo-folha img{height:270px}.demo-grid{grid-template-columns:1fr;gap:14px}.demo-card{display:grid;grid-template-columns:38% 1fr}.demo-image{height:210px;padding:7px}.demo-copy{padding:12px}.demo-copy h4{font-size:16px}.demo-copy p{font-size:13px}.bonus-premium{grid-template-columns:1fr;padding:30px 15px 17px}.bonus-premium .bonus-copy h3{font-size:25px}.oferta .itens{columns:1;max-width:300px}.oferta .mini{max-height:220px}}
 @media(max-width:380px){.demo-card{grid-template-columns:34% 1fr}.demo-image{height:200px}.metodo-passo p{font-size:12px}}
+
+/* Três bônus — cards adicionais no kit */
+.bonus-collection{margin:28px 0 10px}
+.bonus-collection .bonus-premium{margin:0}
+.bonus-new-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:18px}
+.bonus-new-card{background:#fff;border:1px solid #e6dcc7;border-radius:15px;overflow:hidden;box-shadow:0 7px 22px #1f2a5a10;display:flex;flex-direction:column}
+.bonus-new-illustration{min-height:145px;background:linear-gradient(135deg,#fff2b0,#f8d66d);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1f2a5a;position:relative;overflow:hidden}
+.bonus-new-illustration:before,.bonus-new-illustration:after{content:"";position:absolute;width:140px;height:140px;border:2px solid #1f2a5a18;border-radius:20px;transform:rotate(25deg);left:-68px;top:-95px}
+.bonus-new-illustration:after{left:auto;right:-90px;top:auto;bottom:-95px}
+.bonus-new-illustration.challenges{background:linear-gradient(135deg,#e1f2e7,#afdcb7)}
+.bonus-icon{position:absolute;left:18px;top:9px;font-size:33px;opacity:.45;font-weight:900}
+.bonus-illustration-number{font-size:66px;font-weight:900;line-height:1;letter-spacing:-.05em}
+.bonus-new-illustration small{font-size:11px;letter-spacing:.12em;font-weight:900}
+.bonus-new-content{padding:21px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.bonus-label{display:inline-flex;background:#fff0b3;color:#1f2a5a;border-radius:99px;padding:5px 10px;font-size:10px;font-weight:900;letter-spacing:.06em}
+.bonus-new-content h3{font-size:21px;line-height:1.25;margin:14px 0 11px}
+.bonus-new-content p{font-size:14px;color:#556174;line-height:1.55;margin:0 0 14px}
+.bonus-pill{margin-top:auto;color:#137040;font-size:12px;font-weight:800}
+.bonus-delivery-note{font-size:12px;color:#667084;text-align:center;margin:15px 0 0}
+@media(max-width:670px){.bonus-new-grid{grid-template-columns:1fr;gap:14px}.bonus-new-card{display:grid;grid-template-columns:31% 1fr}.bonus-new-illustration{min-height:190px}.bonus-illustration-number{font-size:55px}.bonus-new-illustration small{font-size:9px;text-align:center;padding:0 5px}.bonus-icon{left:9px;top:9px;font-size:25px}.bonus-new-content{padding:17px 13px}.bonus-new-content h3{font-size:18px;margin:11px 0 8px}.bonus-new-content p{font-size:13px}.bonus-label{font-size:9px}.bonus-collection{margin-top:27px}}
+@media(max-width:380px){.bonus-new-card{grid-template-columns:28% 1fr}.bonus-illustration-number{font-size:44px}}
 </style>
 </head>
 <body>
@@ -391,9 +412,22 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
       <li>Missões de 40 a 50 minutos, em grupos de 3 a 5 alunos ou individual</li>
     </ul>
     <p class="formato emailnote">Tudo em PDF. Você recebe o acesso no e-mail assim que o pagamento é aprovado e pode imprimir para as suas turmas sempre que precisar.</p>
-    <div class="bonus bonus-premium"><span class="ribbon">BÔNUS INCLUSO</span>
-      <div class="bonus-copy"><span class="eyebrow">PARA ENTRAR NO CLIMA</span><h3>Kit de Ambientação</h3><p>Crachá de agente, ficha de registro do grupo e certificado de missão cumprida para imprimir.</p><div class="bonus-tags"><span>✓ Crachá</span><span>✓ Ficha do grupo</span><span>✓ Certificado</span></div></div>
-      <div class="bonus-art"><img src="img/bonus.webp" width="900" height="700" alt="Exemplos do crachá de agente, ficha do grupo e certificado do bônus" loading="lazy" decoding="async"></div>
+    <div class="bonus-collection" aria-label="Três bônus inclusos no kit">
+      <div class="bonus bonus-premium"><span class="ribbon">BÔNUS 01</span>
+        <div class="bonus-copy"><span class="eyebrow">PARA ENTRAR NO CLIMA</span><h3>Kit de Ambientação</h3><p>Crachá de agente, ficha de registro do grupo e certificado de missão cumprida para imprimir.</p><div class="bonus-tags"><span>✓ Crachá</span><span>✓ Ficha do grupo</span><span>✓ Certificado</span></div></div>
+        <div class="bonus-art"><img src="img/bonus.webp" width="900" height="700" alt="Exemplos do crachá de agente, ficha do grupo e certificado do bônus" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="bonus-new-grid">
+        <article class="bonus-new-card">
+          <div class="bonus-new-illustration" aria-hidden="true"><span class="bonus-icon">▦</span><span class="bonus-illustration-number">30</span><small>DIAS DE AULA</small></div>
+          <div class="bonus-new-content"><span class="bonus-label">BÔNUS 02 · PDF</span><h3>Plano de Aplicação de 30 Dias</h3><p>Três trilhas de 10 encontros, uma para cada série, com a sequência das missões, referência de habilidades e ficha de acompanhamento.</p><span class="bonus-pill">✓ Pronto para organizar suas aulas</span></div>
+        </article>
+        <article class="bonus-new-card">
+          <div class="bonus-new-illustration challenges" aria-hidden="true"><span class="bonus-icon">✦</span><span class="bonus-illustration-number">30</span><small>DESAFIOS EXTRAS</small></div>
+          <div class="bonus-new-content"><span class="bonus-label">BÔNUS 03 · PDF</span><h3>Banco de Desafios Relâmpago</h3><p>30 problemas rápidos, 10 para cada série, para aquecimento ou revisão. Inclui espaço para resolver e gabarito comentado para a professora.</p><span class="bonus-pill">✓ Aplicação em 3–5 minutos</span></div>
+        </article>
+      </div>
+      <p class="bonus-delivery-note">Os três bônus são materiais complementares ao kit. O acesso aos PDFs é disponibilizado após a compra.</p>
     </div>
     <a class="btn checkout" href="#oferta">Quero as 30 missões por R$&nbsp;17,90</a>
   </div>
@@ -434,7 +468,7 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
     <div class="oferta"><span class="stamp offerstamp">MISSÃO Nº 01</span>
       <span class="eyebrow">OFERTA</span><h2>Tudo isso por</h2>
       <img class="mini" src="img/mockup-primeira-dobra.webp" onerror="this.onerror=null;this.src='img/kit.webp'" width="1050" height="700" alt="Mockup de três missões do kit Matemática em Missão" loading="lazy" decoding="async">
-      <div class="itens"><span>30 missões</span><span>3 séries</span><span>3 níveis</span><span>gabarito comentado</span><span>roteiro de 2 min</span><span>Kit de Ambientação</span></div>
+      <div class="itens"><span>30 missões</span><span>3 séries</span><span>3 níveis</span><span>gabarito comentado</span><span>roteiro de 2 min</span><span>3 bônus inclusos</span></div>
       <div class="preco">R$&nbsp;17,90<small>pagamento único</small></div>
       <p class="compara">Menos de R$&nbsp;0,60 por missão pronta.</p>
       <a class="btn checkout" href="#oferta">Quero as missões da minha turma</a>

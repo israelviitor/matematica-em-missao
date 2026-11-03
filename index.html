@@ -253,15 +253,16 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 
 /* Vitrines de missões — carrossel leve, sem biblioteca externa */
 .vitrine-intro{text-align:center;margin:25px auto 15px}.vitrine-intro h3{margin:0 0 5px}.vitrine-intro p{margin:0;color:#5b6474}
-.vitrine-frame{position:relative;max-width:1040px;margin:0 auto}
-.vitrine-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:thin;padding:10px 4px 20px}
-.vitrine-card{margin:0;flex:0 0 calc((100% - 36px)/3);min-width:0;scroll-snap-align:start;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #15234420}
+.vitrine-frame{position:relative;max-width:1040px;margin:0 auto;overflow:hidden}
+.vitrine-track{display:flex;width:max-content;gap:0;animation:vitrine-rolagem 64s linear infinite;will-change:transform}
+.vitrine-set{display:flex;gap:18px;flex:none;padding:10px 18px 20px 0}
+.vitrine-card{margin:0;flex:0 0 320px;width:320px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #15234420}
 .vitrine-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-
-.vitrine-arrow{position:absolute;top:45%;z-index:2;border:0;background:#1f2a5a;color:white;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:30px;line-height:1;box-shadow:0 4px 12px #0004}
-.vitrine-prev{left:-18px}.vitrine-next{right:-18px}.vitrine-arrow:hover{background:#303e7a}
+@keyframes vitrine-rolagem{to{transform:translateX(-50%)}}
+.vitrine-frame:hover .vitrine-track,.vitrine-frame:focus-within .vitrine-track{animation-play-state:paused}
 .vitrine-hint{text-align:center;color:#627083;font-size:13px;margin:8px 0 30px}
-@media(max-width:760px){.vitrine-track{gap:12px;padding:8px 8px 18px}.vitrine-card{flex:0 0 82%;}.vitrine-arrow{display:none}.vitrine-intro h3{font-size:22px}.vitrine-hint{font-size:12px}}
+@media(max-width:760px){.vitrine-set{gap:12px;padding:8px 12px 18px 0}.vitrine-card{flex-basis:78vw;width:78vw;max-width:340px}.vitrine-intro h3{font-size:22px}.vitrine-hint{font-size:12px}.vitrine-track{animation-duration:72s}}
+@media(prefers-reduced-motion:reduce){.vitrine-track{animation:none}.vitrine-frame{overflow-x:auto;scrollbar-width:thin}}
 </style>
 </head>
 <body>
@@ -324,9 +325,9 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
   <div class="wrap">
     <span class="eyebrow">POR DENTRO</span><h2>Veja uma missão por dentro</h2>
     <div class="vitrine-intro"><h3>Conheça algumas das missões</h3><p>Explore as atividades de matemática do 3º, 4º e 5º ano.</p></div>
-<div class="vitrine-frame">
-  <button type="button" class="vitrine-arrow vitrine-prev" aria-label="Ver missão anterior" onclick="this.parentElement.querySelector('.vitrine-track').scrollBy({left:-this.parentElement.querySelector('.vitrine-track').clientWidth*.85,behavior:'smooth'})">‹</button>
-  <div class="vitrine-track" role="region" aria-label="Vitrines de missões" tabindex="0">
+<div class="vitrine-frame" role="region" aria-label="Vitrines de missões em rolagem automática">
+  <div class="vitrine-track">
+    <div class="vitrine-set">
     <figure class="vitrine-card"><img src="img/vitrine-horta.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Horta, atividade do 3º ano"></figure>
     <figure class="vitrine-card"><img src="img/vitrine-r50.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Caso dos R$ 50, atividade do 4º ano"></figure>
     <figure class="vitrine-card"><img src="img/vitrine-capsula.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Cápsula do Tempo, atividade do 5º ano"></figure>
@@ -335,10 +336,10 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
     <figure class="vitrine-card"><img src="img/vitrine-pizza-dividida.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Enigma da Pizza Dividida, 4º ano"></figure>
     <figure class="vitrine-card"><img src="img/vitrine-mapa-escola.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Segredo do Mapa da Escola, 4º ano"></figure>
     <figure class="vitrine-card"><img src="img/vitrine-tesouro-plano.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Caso do Tesouro no Plano, 5º ano"></figure>
+    </div>
   </div>
-  <button type="button" class="vitrine-arrow vitrine-next" aria-label="Ver próxima missão" onclick="this.parentElement.querySelector('.vitrine-track').scrollBy({left:this.parentElement.querySelector('.vitrine-track').clientWidth*.85,behavior:'smooth'})">›</button>
 </div>
-<p class="vitrine-hint">Deslize para conhecer as missões. Imagens ilustrativas: folhas entregues em preto e branco.</p>
+<p class="vitrine-hint">As missões passam automaticamente. Imagens ilustrativas: folhas entregues em preto e branco.</p>
 <figure class="missions-mockup"><img src="img/mockup-missoes-65.webp" width="960" height="640" loading="lazy" decoding="async" alt="Ilustração conceitual das missões de matemática do 3º ao 5º ano, com folhas em preto e branco" onerror="this.closest('figure').hidden=true"><figcaption>Ilustração do conceito do kit. Veja abaixo as amostras reais das atividades.</figcaption></figure>
     <div class="figura"><img src="img/etapa.webp" data-next-image="etapa-zoom.webp" width="900" height="1180" alt="Etapa 1 da missão do 4º ano" loading="lazy"></div>
     <p class="legenda">Repare: a folha não diz se é de mais ou de menos. Quem decide é a turma.</p>
@@ -449,6 +450,18 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
   </div>
 </footer>
 
+<script>
+(function () {
+  var track = document.querySelector('.vitrine-track');
+  if (!track) return;
+  var set = track.querySelector('.vitrine-set');
+  if (!set || track.querySelectorAll('.vitrine-set').length !== 1) return;
+  var duplicate = set.cloneNode(true);
+  duplicate.setAttribute('aria-hidden', 'true');
+  duplicate.querySelectorAll('img').forEach(function(img) { img.setAttribute('alt', ''); });
+  track.appendChild(duplicate);
+})();
+</script>
 <script>
 // ===== CONFIGURAÇÃO (preencher antes de publicar) =====
 var CONFIG = {

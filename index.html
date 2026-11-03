@@ -311,6 +311,20 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 .bonus-delivery-note{font-size:12px;color:#667084;text-align:center;margin:15px 0 0}
 @media(max-width:670px){.bonus-new-grid{grid-template-columns:1fr;gap:14px}.bonus-new-card{display:grid;grid-template-columns:31% 1fr}.bonus-new-illustration{min-height:190px}.bonus-illustration-number{font-size:55px}.bonus-new-illustration small{font-size:9px;text-align:center;padding:0 5px}.bonus-icon{left:9px;top:9px;font-size:25px}.bonus-new-content{padding:17px 13px}.bonus-new-content h3{font-size:18px;margin:11px 0 8px}.bonus-new-content p{font-size:13px}.bonus-label{font-size:9px}.bonus-collection{margin-top:27px}}
 @media(max-width:380px){.bonus-new-card{grid-template-columns:28% 1fr}.bonus-illustration-number{font-size:44px}}
+
+/* Ajustes finais solicitados: CTA visível, método sem figura central */
+@media(min-width:761px){
+  .hero-conversion .hero-copy{transform:translateY(-40px)}
+  .metodo-visual{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;max-width:770px;gap:15px}
+  .metodo-a{grid-column:1;grid-row:1}.metodo-b{grid-column:2;grid-row:1}
+  .metodo-c{grid-column:1;grid-row:2}.metodo-d{grid-column:2;grid-row:2}
+}
+@media(max-width:760px){
+  .hero-conversion .hero-inner{padding-top:85px!important}
+  .metodo-visual{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;max-width:560px}
+  .metodo-a{grid-column:1;grid-row:1}.metodo-b{grid-column:2;grid-row:1}
+  .metodo-c{grid-column:1;grid-row:2}.metodo-d{grid-column:2;grid-row:2}
+}
 </style>
 </head>
 <body>
@@ -360,7 +374,7 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
     <div class="metodo-visual" aria-label="Quatro passos do Problema com Enredo">
       <div class="metodo-passo metodo-a"><span class="metodo-numero">01</span><strong>🔍 Ler</strong><p>A turma acha os dados na cena da história.</p></div>
       <div class="metodo-passo metodo-b"><span class="metodo-numero">02</span><strong>🤔 Decidir</strong><p>Escolhe qual conta resolve.</p></div>
-      <figure class="metodo-folha"><span class="metodo-selo">UMA MISSÃO DE VERDADE</span><img src="img/etapa.webp" width="900" height="1180" loading="lazy" decoding="async" alt="Exemplo de uma etapa impressa da missão de matemática"><figcaption>Exemplo da etapa que a turma precisa interpretar</figcaption></figure>
+      
       <div class="metodo-passo metodo-c"><span class="metodo-numero">03</span><strong>✏️ Resolver</strong><p>Faz a conta.</p></div>
       <div class="metodo-passo metodo-d"><span class="metodo-numero">04</span><strong>✅ Conferir</strong><p>Vê se a resposta faz sentido no caso.</p></div>
     </div>
@@ -423,8 +437,8 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
           <div class="bonus-new-content"><span class="bonus-label">BÔNUS 02 · PDF</span><h3>Plano de Aplicação de 30 Dias</h3><p>Três trilhas de 10 encontros, uma para cada série, com a sequência das missões, referência de habilidades e ficha de acompanhamento.</p><span class="bonus-pill">✓ Pronto para organizar suas aulas</span></div>
         </article>
         <article class="bonus-new-card">
-          <div class="bonus-new-illustration challenges" aria-hidden="true"><span class="bonus-icon">✦</span><span class="bonus-illustration-number">30</span><small>DESAFIOS EXTRAS</small></div>
-          <div class="bonus-new-content"><span class="bonus-label">BÔNUS 03 · PDF</span><h3>Banco de Desafios Relâmpago</h3><p>30 problemas rápidos, 10 para cada série, para aquecimento ou revisão. Inclui espaço para resolver e gabarito comentado para a professora.</p><span class="bonus-pill">✓ Aplicação em 3–5 minutos</span></div>
+          <div class="bonus-new-illustration challenges" aria-hidden="true"><span class="bonus-icon">▧</span><span class="bonus-illustration-number">A4</span><small>OU A3 · P&amp;B</small></div>
+          <div class="bonus-new-content"><span class="bonus-label">BÔNUS 03 · 2 CARTAZES PDF</span><h3>Cartaz do Problema com Enredo + Painel “Missões Cumpridas”</h3><p>Dois materiais em preto e branco, nos formatos A4 e A3, para colocar na parede: o passo a passo Ler → Decidir → Resolver → Conferir e o acompanhamento visual das missões concluídas.</p><span class="bonus-pill">✓ Prontos para imprimir e usar na sala</span></div>
         </article>
       </div>
       <p class="bonus-delivery-note">Os três bônus são materiais complementares ao kit. O acesso aos PDFs é disponibilizado após a compra.</p>

@@ -254,14 +254,14 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 /* Vitrines de missões — carrossel leve, sem biblioteca externa */
 .vitrine-intro{text-align:center;margin:25px auto 15px}.vitrine-intro h3{margin:0 0 5px}.vitrine-intro p{margin:0;color:#5b6474}
 .vitrine-frame{position:relative;max-width:1040px;margin:0 auto;overflow:hidden}
-.vitrine-track{display:flex;width:max-content;gap:0;animation:vitrine-rolagem 64s linear infinite;will-change:transform}
-.vitrine-set{display:flex;gap:18px;flex:none;padding:10px 18px 20px 0}
-.vitrine-card{margin:0;flex:0 0 320px;width:320px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #15234420}
+.vitrine-track{display:flex;width:max-content;gap:0;animation:vitrine-rolagem 58s linear infinite;will-change:transform}
+.vitrine-set{display:flex;gap:14px;flex:none;padding:8px 14px 14px 0}
+.vitrine-card{margin:0;flex:0 0 250px;width:250px;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 4px 14px #1523441c;content-visibility:auto;contain-intrinsic-size:250px 334px}
 .vitrine-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
 @keyframes vitrine-rolagem{to{transform:translateX(-50%)}}
-.vitrine-frame:hover .vitrine-track,.vitrine-frame:focus-within .vitrine-track{animation-play-state:paused}
+.vitrine-frame:hover .vitrine-track,.vitrine-frame:focus-within .vitrine-track,.vitrine-frame[data-offscreen="true"] .vitrine-track{animation-play-state:paused}
 .vitrine-hint{text-align:center;color:#627083;font-size:13px;margin:8px 0 30px}
-@media(max-width:760px){.vitrine-set{gap:12px;padding:8px 12px 18px 0}.vitrine-card{flex-basis:78vw;width:78vw;max-width:340px}.vitrine-intro h3{font-size:22px}.vitrine-hint{font-size:12px}.vitrine-track{animation-duration:72s}}
+@media(max-width:760px){.vitrine-set{gap:10px;padding:6px 10px 12px 0}.vitrine-card{flex-basis:64vw;width:64vw;max-width:260px;contain-intrinsic-size:240px 320px}.vitrine-intro h3{font-size:22px}.vitrine-hint{font-size:12px}.vitrine-track{animation-duration:68s}}
 @media(prefers-reduced-motion:reduce){.vitrine-track{animation:none}.vitrine-frame{overflow-x:auto;scrollbar-width:thin}}
 </style>
 </head>
@@ -328,14 +328,14 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 <div class="vitrine-frame" role="region" aria-label="Vitrines de missões em rolagem automática">
   <div class="vitrine-track">
     <div class="vitrine-set">
-    <figure class="vitrine-card"><img src="img/vitrine-horta.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Horta, atividade do 3º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-r50.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Caso dos R$ 50, atividade do 4º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-capsula.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Cápsula do Tempo, atividade do 5º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-feirinha-trocas.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Feirinha de Trocas, 3º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-enigma-gincana.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Enigma da Gincana, 3º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-pizza-dividida.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Enigma da Pizza Dividida, 4º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-mapa-escola.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Segredo do Mapa da Escola, 4º ano"></figure>
-    <figure class="vitrine-card"><img src="img/vitrine-tesouro-plano.webp" loading="lazy" decoding="async" width="790" height="1000" alt="Vitrine ilustrada O Caso do Tesouro no Plano, 5º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-horta.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Horta, atividade do 3º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-r50.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Caso dos R$ 50, atividade do 4º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-capsula.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Cápsula do Tempo, atividade do 5º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-feirinha-trocas.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Mistério da Feirinha de Trocas, 3º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-enigma-gincana.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Enigma da Gincana, 3º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-pizza-dividida.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Enigma da Pizza Dividida, 4º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-mapa-escola.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Segredo do Mapa da Escola, 4º ano"></figure>
+    <figure class="vitrine-card"><img src="img/vitrine-tesouro-plano.webp" loading="lazy" decoding="async" fetchpriority="low" width="790" height="1000" alt="Vitrine ilustrada O Caso do Tesouro no Plano, 5º ano"></figure>
     </div>
   </div>
 </div>
@@ -458,8 +458,15 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
   if (!set || track.querySelectorAll('.vitrine-set').length !== 1) return;
   var duplicate = set.cloneNode(true);
   duplicate.setAttribute('aria-hidden', 'true');
-  duplicate.querySelectorAll('img').forEach(function(img) { img.setAttribute('alt', ''); });
+  duplicate.querySelectorAll('img').forEach(function(img) { img.setAttribute('alt', ''); img.setAttribute('loading', 'lazy'); img.setAttribute('fetchpriority', 'low'); });
   track.appendChild(duplicate);
+  var frame = track.closest('.vitrine-frame');
+  if (frame && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      frame.dataset.offscreen = entries[0].isIntersecting ? 'false' : 'true';
+    }, { threshold: 0.01 });
+    observer.observe(frame);
+  }
 })();
 </script>
 <script>

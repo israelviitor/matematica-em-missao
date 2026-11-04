@@ -11,6 +11,20 @@
 <meta property="og:description" content="Missões de mistério para imprimir: a turma só avança se ler o problema e escolher a conta.">
 <meta property="og:image" content="img/kit.webp">
 <link rel="preload" as="image" href="img/kit.webp">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2229100660976879');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 <style>
 :root { --azul: #1f2a5a; --verde: #12873f; --verde-esc: #0d6b31; --creme: #fbf7ee; --cinza: #5b6170; --borda: #e4dccb; }
 * { box-sizing: border-box; }
@@ -328,6 +342,7 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2229100660976879&amp;ev=PageView&amp;noscript=1" alt=""></noscript>
 
 <div class="faixa">Para professoras do 3º, 4º e 5º ano</div>
 
@@ -548,7 +563,7 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 // ===== CONFIGURAÇÃO (preencher antes de publicar) =====
 var CONFIG = {
   checkout: '',  // link do checkout da Cakto do produto principal (ex.: https://pay.cakto.com.br/xxxxx)
-  pixel: ''      // ID do Pixel do Meta (só números)
+  pixel: '2229100660976879' // ID do Pixel Meta, carregado exclusivamente no head
 };
 
 // Repasse de UTMs: utm_*, src, sck e fbclid da URL da página vão para todos os botões do checkout.
@@ -565,16 +580,39 @@ var CONFIG = {
   });
 })();
 
-// Pixel do Meta: PageView ao abrir e ViewContent quando a oferta aparece na tela.
-if (CONFIG.pixel) {
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', CONFIG.pixel);
-  fbq('track', 'PageView');
-  var oferta = document.getElementById('oferta'), visto = false;
-  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {
-    if (!visto && es[0].isIntersecting) { visto = true; fbq('track', 'ViewContent', { content_name: 'Matemática em Missão', value: 17.90, currency: 'BRL' }); }
-  }).observe(oferta);
-}
+// Eventos complementares. PageView e init aparecem apenas no código base do head.
+(function () {
+  if (typeof fbq !== 'function') return;
+  var oferta = document.getElementById('oferta');
+  var visto = false;
+  function enviarViewContent() {
+    if (visto) return;
+    visto = true;
+    fbq('track', 'ViewContent', { content_name: 'Matemática em Missão', value: 17.90, currency: 'BRL' });
+  }
+  if (oferta && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        enviarViewContent();
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    observer.observe(oferta);
+  } else if (oferta) {
+    enviarViewContent();
+  }
+  // Só dispara intenção de checkout quando existe um destino externo de pagamento.
+  document.querySelectorAll('a.checkout').forEach(function (link) {
+    link.addEventListener('click', function () {
+      try {
+        var dest = new URL(link.href, location.href);
+        if (dest.origin !== location.origin && /^https?:$/.test(dest.protocol)) {
+          fbq('track', 'InitiateCheckout', { content_name: 'Matemática em Missão', value: 17.90, currency: 'BRL', num_items: 1 });
+        }
+      } catch (e) {}
+    });
+  });
+})();
 </script>
 </body>
 </html>

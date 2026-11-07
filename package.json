@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build && mkdir -p dist/img && cp -R img/. dist/img/ && cp termos.html privacidade.html dist/ && cp upsell.html dist/ && mkdir -p dist/upsell && cp upsell/index.html dist/upsell/",
+    "build": "vite build && mkdir -p dist/img && cp -R img/. dist/img/ && cp termos.html privacidade.html dist/ && cp upsell.html dist/ && mkdir -p dist/upsell && cp upsell/index.html dist/upsell/ && cp downsell.html dist/ && mkdir -p dist/downsell && cp downsell/index.html dist/downsell/",
     "preview": "vite preview --host 0.0.0.0"
   },
   "devDependencies": {

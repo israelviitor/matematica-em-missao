@@ -375,6 +375,25 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 .plan-premium-mockup{margin:0 auto 21px;max-width:500px;line-height:0}
 .plan-premium-mockup img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;border-radius:12px}
 @media(max-width:760px){.plan-premium-mockup{margin:0 -5px 16px;max-width:none}}
+/* Seção de mensagens — carrossel de prints dos professores */
+.teacher-voices{background:#fbf6ea;overflow:hidden;padding:77px 0 82px}
+.teacher-voices .tv-heading{text-align:center;padding:0 20px;max-width:900px;margin:0 auto 38px}
+.teacher-voices .tv-kicker{display:block;color:#1f2a5a;font-size:12px;letter-spacing:.16em;font-weight:900;margin-bottom:12px}
+.teacher-voices h2{font-weight:950;font-size:clamp(31px,4.5vw,50px);line-height:1.15;letter-spacing:-.035em;color:#1f2a5a;margin:0 0 14px}
+.teacher-voices h2 em{color:#d6a114;font-style:normal}
+.teacher-voices .tv-sub{font-size:clamp(15px,2vw,18px);line-height:1.6;color:#5b6170;margin:0 auto;max-width:740px}
+.teacher-voices .tv-viewport{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;touch-action:pan-y;user-select:none;overscroll-behavior-x:contain}
+.teacher-voices .tv-viewport::-webkit-scrollbar{display:none}
+.teacher-voices .tv-viewport:active{cursor:grabbing}
+.teacher-voices .tv-track{display:flex;gap:18px;width:max-content;padding:8px 18px 22px}
+.teacher-voices .tv-card{flex:none;width:245px;height:492px;padding:8px;border:1.5px solid #e9dcb7;background:#fff;border-radius:16px;box-shadow:0 7px 22px #1f2a5a0b;overflow:hidden}
+.teacher-voices .tv-card img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;pointer-events:none}
+.teacher-voices .tv-fallback{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f3f2f0;border-radius:9px;color:#1f2a5a;text-align:center;padding:18px;gap:12px}
+.teacher-voices .tv-fallback strong{font-size:18px}.teacher-voices .tv-fallback span{font-size:13px;line-height:1.6;color:#667085}
+.teacher-voices .tv-hint{text-align:center;font-size:12px;color:#667085;margin:10px 20px 0}
+.teacher-voices .tv-preview-label{font-size:11px;color:#6b7280;text-align:center;margin:12px 18px 0}
+@media(max-width:630px){.teacher-voices{padding:55px 0 60px}.teacher-voices .tv-heading{margin-bottom:25px}.teacher-voices .tv-track{gap:12px;padding:5px 12px 15px}.teacher-voices .tv-card{width:min(72vw,270px);height:500px}}
+@media(prefers-reduced-motion:reduce){.teacher-voices .tv-viewport{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -526,6 +545,26 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
     <h2>Por que ensinar com problema e história</h2>
     <div class="proof-band"><div class="prova">A BNCC coloca a investigação e a resolução de problemas como "formas privilegiadas da atividade matemática".<span class="fonte">Fonte: BNCC, p. 266</span></div>
     <div class="prova">Uma pesquisa da USP numa escola municipal de São Paulo viu que a história deixa a turma dos anos iniciais mais envolvida com a matemática.<span class="fonte">Fonte: tese USP, 2023</span></div></div></div></section>
+
+<!-- Carrossel de mensagens enviadas. Fotografias simuladas são ilustrações. -->
+<section class="teacher-voices" id="depoimentos" aria-labelledby="teacher-voices-title">
+ <div class="tv-heading">
+  <span class="tv-kicker">MENSAGENS SOBRE O MATERIAL</span>
+  <h2 id="teacher-voices-title">O QUE OS PROFESSORES <em>ACHAM</em></h2>
+  <p class="tv-sub">Veja mensagens compartilhadas sobre o Matemática em Missão.</p>
+ </div>
+ <div class="tv-viewport" id="tv-viewport" role="region" aria-roledescription="carrossel" aria-label="Depoimentos — arraste para navegar" tabindex="0">
+  <div class="tv-track" id="tv-track"><article class="tv-card" aria-label="Depoimento 1"><img src="img/depoimento-01.webp" alt="Captura de mensagem 1 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 01</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article>
+<article class="tv-card" aria-label="Depoimento 2"><img src="img/depoimento-02.webp" alt="Captura de mensagem 2 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 02</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article>
+<article class="tv-card" aria-label="Depoimento 3"><img src="img/depoimento-03.webp" alt="Captura de mensagem 3 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 03</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article>
+<article class="tv-card" aria-label="Depoimento 4"><img src="img/depoimento-04.webp" alt="Captura de mensagem 4 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 04</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article>
+<article class="tv-card" aria-label="Depoimento 5"><img src="img/depoimento-05.webp" alt="Captura de mensagem 5 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 05</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article>
+<article class="tv-card" aria-label="Depoimento 6"><img src="img/depoimento-06.webp" alt="Captura de mensagem 6 de professora sobre o Matemática em Missão" loading="lazy" draggable="false" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="tv-fallback" hidden><strong>Depoimento 06</strong><span>Área reservada para o print original.<br>Upload do WebP pendente.</span></div></article></div>
+ </div>
+ <p class="tv-hint">Deslize para explorar as mensagens</p>
+ <p class="tv-preview-label">Imagens de atividades e situações em sala são ilustrativas.</p>
+</section>
+
 
 <!-- 8. Oferta, preço e garantia -->
 <section class="creme" id="oferta">
@@ -707,5 +746,27 @@ var CONFIG = {
   });
 })();
 </script>
-</body>
+<script>
+(function(){
+ const viewport=document.getElementById('tv-viewport'),track=document.getElementById('tv-track');
+ if(!viewport||!track)return;
+ const original=Array.from(track.children);
+ original.forEach(function(card){const clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.setAttribute('tabindex','-1');track.appendChild(clone)});
+ const half=()=>track.scrollWidth/2;
+ let paused=false,drag=false,lastX=0,lastTime=0,raf=0;
+ function step(t){if(!lastTime)lastTime=t;let dt=Math.min(64,t-lastTime);lastTime=t;
+ if(!paused&&!drag&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){viewport.scrollLeft+=dt*0.035;if(viewport.scrollLeft>=half())viewport.scrollLeft-=half();}
+ raf=requestAnimationFrame(step)}
+ viewport.addEventListener('mouseenter',()=>paused=true);
+ viewport.addEventListener('mouseleave',()=>{if(!drag)paused=false});
+ viewport.addEventListener('focusin',()=>paused=true);
+ viewport.addEventListener('focusout',()=>paused=false);
+ viewport.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){drag=true;paused=true;lastX=e.clientX;viewport.setPointerCapture(e.pointerId)}});
+ viewport.addEventListener('pointermove',e=>{if(!drag)return;viewport.scrollLeft-=e.clientX-lastX;lastX=e.clientX;if(viewport.scrollLeft>=half())viewport.scrollLeft-=half();if(viewport.scrollLeft<0)viewport.scrollLeft+=half()});
+ const stop=()=>{drag=false;paused=false};viewport.addEventListener('pointerup',stop);viewport.addEventListener('pointercancel',stop);
+ viewport.addEventListener('scroll',()=>{if(!drag&&viewport.scrollLeft>=half())viewport.scrollLeft-=half()},{passive:true});
+ document.addEventListener('visibilitychange',()=>{paused=document.hidden});
+ raf=requestAnimationFrame(step);
+})();
+</script></body>
 </html>

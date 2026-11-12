@@ -409,6 +409,12 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
 @media(max-width:800px){.bonus-visual-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.bonus-visual-copy{padding:14px}}
 @media(max-width:520px){.bonus-visual-grid{grid-template-columns:1fr;max-width:390px;gap:17px}.bonus-visual-media{padding:9px}.bonus-visual-media img{aspect-ratio:auto;max-height:470px}.bonus-visual-copy{padding:16px 17px 20px}.bonus-visual-copy h3{font-size:20px}.bonus-visual-copy p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.bonus-visual-card{transition:none}}
+
+/* Faixa de valor acima do mockup, como na referência */
+.bonus-visual-price{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:#1c1a18;color:#ddd5c7;border-bottom:1px solid #e5b43f;font-size:12px;line-height:1.2}
+.bonus-visual-price del{color:#a9a49d;text-decoration-thickness:1px}
+.bonus-visual-price strong{display:inline-block;background:#178447;color:#fff;border-radius:5px;font-weight:900;letter-spacing:.04em;font-size:11px;white-space:nowrap;padding:8px 10px;box-shadow:0 2px 8px #146b3955}
+@media(max-width:520px){.bonus-visual-price{font-size:12px;padding:11px 12px}.bonus-visual-price strong{font-size:11px;padding:8px 10px}}
 </style>
 </head>
 <body>
@@ -517,23 +523,23 @@ section.hero-editable.hero-conversion:after{background:linear-gradient(90deg,#06
     <div class="bonus-collection" aria-label="Cinco bônus exclusivos do plano Premium">
   <div class="bonus-collection-head"><span class="eyebrow">EXCLUSIVOS DO PREMIUM</span><h3>5 bônus para transformar missões em aulas completas</h3><p>Da preparação à revisão final, tudo organizado para usar com a turma.</p></div>
   <div class="bonus-visual-grid">
-<article class="bonus-visual-card">
+<article class="bonus-visual-card"><div class="bonus-visual-price"><span>Valor normal: <del>R$ 19,90</del></span><strong>HOJE: GRÁTIS</strong></div>
  <div class="bonus-visual-media"><img src="img/Bo%CC%82nus%201%20-%20Kit%20de%20Ambientac%CC%A7a%CC%83o.webp" alt="Apresentação visual do Kit de Ambientação" loading="lazy" decoding="async"></div>
  <div class="bonus-visual-copy"><span class="bonus-label">BÔNUS 01 · PREMIUM</span><h3>Kit de Ambientação</h3><p>Crachá de agente para cada aluno, ficha de registro do grupo e certificado de missão cumprida. Inclui versões para impressão.</p><span class="bonus-pill">✓ Crachás, ficha e certificado</span></div>
  </article>
-<article class="bonus-visual-card">
+<article class="bonus-visual-card"><div class="bonus-visual-price"><span>Valor normal: <del>R$ 14,90</del></span><strong>HOJE: GRÁTIS</strong></div>
  <div class="bonus-visual-media"><img src="img/Bo%CC%82nus%202%20%E2%80%94%20Plano%20de%20Aplicac%CC%A7a%CC%83o%20de%2030%20Dias.webp" alt="Apresentação visual do Plano de Aplicação de 30 Dias" loading="lazy" decoding="async"></div>
  <div class="bonus-visual-copy"><span class="bonus-label">BÔNUS 02 · PREMIUM</span><h3>Plano de Aplicação de 30 Dias</h3><p>Três trilhas de 10 encontros, uma por série, com ordem das missões, habilidades e ficha de acompanhamento.</p><span class="bonus-pill">✓ Aulas organizadas</span></div>
  </article>
-<article class="bonus-visual-card">
+<article class="bonus-visual-card"><div class="bonus-visual-price"><span>Valor normal: <del>R$ 14,90</del></span><strong>HOJE: GRÁTIS</strong></div>
  <div class="bonus-visual-media"><img src="img/Bo%CC%82nus%203%20%E2%80%94%20Cartazes%20e%20Painel.webp" alt="Apresentação visual do Cartaz do Problema com Enredo + Painel “Missões Cumpridas”" loading="lazy" decoding="async"></div>
  <div class="bonus-visual-copy"><span class="bonus-label">BÔNUS 03 · PREMIUM</span><h3>Cartaz do Problema com Enredo + Painel “Missões Cumpridas”</h3><p>Cartazes e painel para apresentar o método Ler → Decidir → Resolver → Conferir e registrar as missões concluídas.</p><span class="bonus-pill">✓ Para a parede da sala</span></div>
  </article>
-<article class="bonus-visual-card">
+<article class="bonus-visual-card"><div class="bonus-visual-price"><span>Valor normal: <del>R$ 19,90</del></span><strong>HOJE: GRÁTIS</strong></div>
  <div class="bonus-visual-media"><img src="img/Bo%CC%82nus%204%20%E2%80%94%20Desafios%20Rela%CC%82mpago.webp" alt="Apresentação visual do Desafios Relâmpago" loading="lazy" decoding="async"></div>
  <div class="bonus-visual-copy"><span class="bonus-label">BÔNUS 04 · PREMIUM</span><h3>Desafios Relâmpago</h3><p>30 problemas rápidos, 10 por série, para aquecimento ou revisão, com espaço para resolver e gabarito comentado.</p><span class="bonus-pill">✓ Revisão rápida</span></div>
  </article>
-<article class="bonus-visual-card">
+<article class="bonus-visual-card"><div class="bonus-visual-price"><span>Valor normal: <del>R$ 24,00</del></span><strong>HOJE: GRÁTIS</strong></div>
  <div class="bonus-visual-media"><img src="img/Bo%CC%82nus%205%20%E2%80%94%20Grande%20Missa%CC%83o%20Final.webp" alt="Apresentação visual do Grande Missão Final" loading="lazy" decoding="async"></div>
  <div class="bonus-visual-copy"><span class="bonus-label">BÔNUS 05 · PREMIUM</span><h3>Grande Missão Final</h3><p>Uma missão mais longa por série, reunindo conteúdos trabalhados ao longo do kit, para o encerramento do projeto.</p><span class="bonus-pill">✓ Encerramento especial</span></div>
  </article>
